@@ -18,7 +18,7 @@ jobs:
 
       - name: Install linters
         run: |
-          npm install -g eslint htmlhint
+          npm install -g eslint@8 htmlhint
 
       - name: Run ESLint
         run: eslint "site/**/*.js"
