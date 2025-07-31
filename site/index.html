@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Solid Template</title>
+    <title>Secure Website with AWS</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
-	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body class="is-boxed has-animations">
@@ -16,11 +16,12 @@
             <div class="container">
                 <div class="site-header-inner">
                     <div class="brand header-brand">
-                        <h1 class="m-0">
-							<a href="#">
-								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <a href="#">
+                                <img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
                             </a>
-                        </h1>
+                            <h1 class="m-0 text-xs" style="margin: 0;">Secure Website with AWS</h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,11 +31,14 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
-						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Landing template for startups</h1>
-	                        <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a class="button" href="#">Get in touch</a></div>
-						</div>
+                        <div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Secure Website with AWS</h1>
+                            <p class="hero-paragraph">A hardened and monitored static site using AWS S3, IAM, CloudFront, GitHub Actions, and OIDC. Built as part of a 7-day secure cloud deployment challenge.</p>
+                            <div class="hero-cta">
+                            <a class="button button-primary" href="https://github.com/leandrocosta-git/secure-website/blob/main/report/report.md">Read the full report</a>
+                            <a class="button" href="https://github.com/leandrocosta-git/secure-website">View GitHub Repo</a>
+                            </div>
+                        </div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
 								<rect width="528" height="396" style="fill:transparent;" />
@@ -63,54 +67,54 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-01.svg" alt="Feature 01">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">Least Privilege IAM</h4>
+                            <p class="text-sm mb-0">Scoped IAM roles for CI, developers, and viewers ensure write, deploy, and read-only permissions with IP/user-agent restrictions.</p>
+                            </div>
                             </div>
 							<div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-02.svg" alt="Feature 02">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">CI/CD with GitHub OIDC</h4>
+                            <p class="text-sm mb-0">GitHub Actions deploys directly to AWS S3 using OIDC authentication—no secrets stored, no keys rotated manually.</p>
+                            </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-03.svg" alt="Feature 03">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">MFA Delete & Versioning</h4>
+                            <p class="text-sm mb-0">Critical objects are protected with S3 versioning and MFA delete to prevent tampering or accidental loss.</p>
+                            </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-04.svg" alt="Feature 04">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">CloudFront + WAF</h4>
+                            <p class="text-sm mb-0">Content is served securely through CloudFront with WAF configured against OWASP Top 10 threats (SQLi, XSS, SSRF).</p>
+                            </div>
                             </div>
 							<div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-05.svg" alt="Feature 05">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">Secure Headers</h4>
+                            <p class="text-sm mb-0">CSP, HSTS, X-XSS-Protection, and X-Frame-Options headers are enforced via CloudFront behavior policies.</p>
+                            </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-06.svg" alt="Feature 06">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                                </div>
+                                    <h4 class="feature-title mt-24">Monitoring & Logging</h4>
+                            <p class="text-sm mb-0">CloudTrail, S3 logs, CloudFront logs, and SNS alerts are enabled to track access, detect abuse, and respond to threats.</p>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -121,30 +125,23 @@
                 <div class="container-sm">
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
-                            <h2 class="section-title mt-0">Unlimited for all</h2>
-                            <p class="section-paragraph mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad quis nostrud.</p>
+                            <h2 class="section-title mt-0">Budget & Cost Guardrails</h2>
+                        <p class="section-paragraph mb-0">An AWS Budget configured with email alerts. All monitoring features (CloudTrail, logs, SNS) use free tier or low-cost services.</p>
                         </div>
 						<div class="pricing-tables-wrap">
                             <div class="pricing-table">
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">49</span><span class="text-xs">/month</span></div>
+                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">€</span><span class="pricing-table-price-amount h1">1</span><span class="text-xs">/month</span></div>
                                         </div>
-										<div class="pricing-table-features-title text-xs pt-24 pb-24">What you will get</div>
+										<div class="pricing-table-features-title text-xs pt-24 pb-24">We got</div>
                                         <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-											<li>
-												<span>Lorem ipsum dolor sit nisi</span>
-											</li>
+                                            <li><span>WAF with OWASP rules</span></li>
+                                            <li><span>Secure headers</span></li>
+                                            <li><span>Scoped roles</span></li>
+                                            <li><span>Access Logs</span></li>
+                                            <li><span>...</span></li>
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
@@ -158,15 +155,19 @@
             </section>
 
 			<section class="cta section">
-				<div class="container">
-					<div class="cta-inner section-inner">
-						<h3 class="section-title mt-0">Still not convinced on buying?</h3>
-						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="#">Get in touch</a>
-						</div>
-					</div>
-				</div>
-			</section>
+                <div class="container">
+                    <div class="cta-inner section-inner" style="width: 100%;">
+                        <h3 class="section-title mt-0">Exploring Secure Cloud Architectures?</h3>
+                        <p class="section-paragraph" style="margin-right: 40px;">
+                            This project is part of a hands-on journey into secure AWS deployments, CI/CD automation, and cloud governance.<br>
+                            If you’re curious about the approach or would like to discuss similar work, feel free to connect.
+                        </p>
+                        <div class="cta-cta">
+                            <a class="button button-primary button-wide-mobile" href="https://www.linkedin.com/in/leandro-rcosta/" target="_blank" rel="noopener">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
@@ -177,42 +178,26 @@
 							<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
 						</a>
                     </div>
-                    <ul class="footer-links list-reset">
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#">About us</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ's</a>
-                        </li>
-                        <li>
-                            <a href="#">Support</a>
-                        </li>
-                    </ul>
                     <ul class="footer-social-links list-reset">
                         <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Facebook</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#0270D7"/>
+                            <a href="https://tryhackme.com/p/lrc" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">TryHackMe</span>
+                                <img src="src/images/Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe Logo" width="16" height="16" fill="#0270D7" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/leandrocosta-git" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">GitHub</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="#0270D7">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                                 </svg>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Twitter</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#0270D7"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Google</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#0270D7"/>
+                            <a href="https://www.linkedin.com/in/leandro-rcosta/" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">LinkedIn</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="#0270D7">
+                                    <path d="M3.9 6H1V16h2.9V6zm-1.45-1.7c.97 0 1.55-.65 1.55-1.45C4 2.05 3.42 1.4 2.45 1.4 1.5 1.4 1 2.05 1 2.85c0 .8.58 1.45 1.45 1.45h.01zM15 10.5c0-2.5-1.34-3.65-3.13-3.65-1.36 0-1.97.75-2.3 1.28V6H6.7c.04.86 0 10 0 10h2.87v-5.6c0-.3.02-.6.11-.82.24-.6.8-1.22 1.74-1.22 1.23 0 1.72.92 1.72 2.27V16H15v-5.5z"/>
                                 </svg>
                             </a>
                         </li>
