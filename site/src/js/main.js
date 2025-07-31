@@ -1,14 +1,13 @@
 (function () {
-  //const win = window
-  const doc = document.documentElement
+  const doc = document.documentElement;
 
-  doc.classList.remove('no-js')
-  doc.classList.add('js')
+  doc.classList.remove('no-js');
+  doc.classList.add('js');
 
   // Reveal animations
   if (document.body.classList.contains('has-animations')) {
-    /* global ScrollReveal */
-    const sr = window.sr = ScrollReveal()
+    // eslint-disable-next-line no-undef
+    const sr = ScrollReveal();
 
     sr.reveal('.feature, .pricing-table-inner', {
       duration: 600,
@@ -16,10 +15,11 @@
       easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
       origin: 'bottom',
       interval: 100
-    })
+    });
 
-    doc.classList.add('anime-ready')
-    /* global anime */
+    doc.classList.add('anime-ready');
+
+    // eslint-disable-next-line no-undef
     anime.timeline({
       targets: '.hero-figure-box-05'
     }).add({
@@ -38,8 +38,9 @@
       rotateY: '-15deg',
       rotateX: '8deg',
       rotateZ: '-1deg'
-    })
+    });
 
+    // eslint-disable-next-line no-undef
     anime.timeline({
       targets: '.hero-figure-box-06, .hero-figure-box-07'
     }).add({
@@ -56,16 +57,17 @@
     }).add({
       duration: 800,
       rotateZ: '20deg'
-    })
+    });
 
+    // eslint-disable-next-line no-undef
     anime({
       targets: '.hero-figure-box-01, .hero-figure-box-02, .hero-figure-box-03, .hero-figure-box-04, .hero-figure-box-08, .hero-figure-box-09, .hero-figure-box-10',
       duration: anime.random(600, 800),
       delay: anime.random(600, 800),
-      rotate: [ anime.random(-360, 360), function (el) { return el.getAttribute('data-rotation') } ],
+      rotate: [anime.random(-360, 360), el => el.getAttribute('data-rotation')],
       scale: [0.7, 1],
       opacity: [0, 1],
       easing: 'easeInOutExpo'
-    })
+    });
   }
-}())
+})();
